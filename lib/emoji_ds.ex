@@ -1,12 +1,9 @@
 defmodule EmojiFinder.DataSet do
-  defp sanitize(line) do
-    line |> String.trim("\n")
-  end
-
   def load(emojis_file) do
     File.open!(emojis_file)
     |> IO.read(:line)
-    |> sanitize
+    |> String.trim("\n")
+    |> String.split(";")
     #%{"UTF-CHAR" => MapSet( )}
     # Conjunto de emoticons vinculados a uma palavra
     # emojis=%{"cat" => MapSet.new(["xpto", "xpta"]), "eye" => MapSet.new(["xpte", "xpto"]), "hand" => MapSet.new(["xptb", "xptc"]), "foot" => MapSet.new(["xptd"])}

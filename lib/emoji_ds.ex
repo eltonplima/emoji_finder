@@ -4,7 +4,8 @@ defmodule EmojiFinder.DataSet do
     |> IO.read(:line)
     |> String.trim("\n")
     |> String.split(";")
-    [emoji_unicode, words]
+    words = String.split(words) |> MapSet.new()
+    %{emoji_unicode => words}
     #%{"UTF-CHAR" => MapSet( )}
     # Conjunto de emoticons vinculados a uma palavra
     # emojis=%{"cat" => MapSet.new(["xpto", "xpta"]), "eye" => MapSet.new(["xpte", "xpto"]), "hand" => MapSet.new(["xptb", "xptc"]), "foot" => MapSet.new(["xptd"])}

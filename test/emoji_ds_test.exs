@@ -5,7 +5,8 @@ defmodule EmojiFinder.DataSetTest do
 
   test "test load data" do
     content = "1F481;INFORMATION DESK PERSON;So;0;ON;;;;;N;;;;;\n"
-    expected = ["1F481", "INFORMATION DESK PERSON"]
+    words = String.split("INFORMATION DESK PERSON")
+    expected = %{"1F481" => MapSet.new(words)}
 
     {:ok, fd, emojis_file} = Temp.open("test.txt")
     IO.write(fd, content)

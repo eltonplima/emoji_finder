@@ -23,3 +23,4 @@ erl_crash.dump
 emoji_finder-*.tar
 
 .elixir_ls/**
+.vscode

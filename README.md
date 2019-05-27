@@ -30,13 +30,13 @@ Our customers needs to find emojis based on key words
 ### Step 2
 
 - [ ] Create datatabase access layer
-  - [ ] Load
-  - [ ] Sanitize
+  - [x] Load
+  - [x] Sanitize
   - [ ] Query
 
 ### Step 3
 
-- [ ] Create internal query API
+- [ ] Create internal query API to expose the query interface created on step 2
 
 ### Step 4
 

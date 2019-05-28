@@ -1,4 +1,4 @@
-defmodule EmojiFinder.DataSet do
+defmodule Emoji.DataSet do
   defp extract_fields(line) do
     [emoji_unicode, words | _rest] = line |> String.split(";", trim: true)
     [emoji_unicode, words]

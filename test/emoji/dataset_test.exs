@@ -1,7 +1,7 @@
 defmodule EmojiFinder.DataSetTest do
   use ExUnit.Case
 
-  doctest EmojiFinder.DataSet
+  doctest Emoji.DataSet
 
   test "test load data" do
     content = """
@@ -18,7 +18,7 @@ defmodule EmojiFinder.DataSetTest do
       "1F639" => MapSet.new(words_unicode_2)
     }
 
-    assert EmojiFinder.DataSet.load(emojis_file) == expected
+    assert Emoji.DataSet.load(emojis_file) == expected
   end
 
 end

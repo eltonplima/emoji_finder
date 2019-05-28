@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :emoji_finder, key: :value
+#     config :emoji, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:emoji_finder, :key)
+#     Application.get_env(:emoji, :key)
 #
 # You can also configure a third-party app:
 #

@@ -8,6 +8,8 @@ use Mix.Config
 # if you want to provide default values for your application for
 # third-party users, it should be done in your "mix.exs" file.
 
+config :emoji, database_path: "static/UnicodeData.txt"
+
 # You can configure your application as:
 #
 #     config :emoji, key: :value
@@ -27,4 +29,4 @@ use Mix.Config
 # Configuration from the imported file will override the ones defined
 # here (which is why it is important to import them last).
 #
-#     import_config "#{Mix.env()}.exs"
+import_config "#{Mix.env()}.exs"

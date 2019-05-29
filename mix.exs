@@ -1,9 +1,9 @@
-defmodule EmojiFinder.MixProject do
+defmodule Emoji.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :emoji_finder,
+      app: :emoji,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

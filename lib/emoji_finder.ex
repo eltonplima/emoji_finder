@@ -1,6 +1,8 @@
 defmodule Emoji.Finder do
-  def find(_term) do
-    emojis = Emoji.Dataset.load_data
-    IO.inspect(emojis)
+  @moduledoc false
+  alias Emoji.DataSet
+
+  def find(_names) do
+    emoji_data = Application.get_env(:emoji, :database_path) |> DataSet.load()
   end
 end

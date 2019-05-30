@@ -1,17 +1,21 @@
-defmodule EmojiFinder.DataSetTest do
+defmodule Emoji.DataSetTest do
   use ExUnit.Case
 
   doctest Emoji.DataSet
 
   test "test load data" do
     emoji_file = Application.get_env(:emoji, :database_path)
-    words_unicode_1 = String.split("INFORMATION DESK PERSON")
-    words_unicode_2 = String.split("CAT FACE WITH TEARS OF JOY")
     expected = %{
-      "1F481" => MapSet.new(words_unicode_1),
-      "1F639" => MapSet.new(words_unicode_2)
+      "INFORMATION" => MapSet.new(["1F481"]),
+      "DESK" => MapSet.new(["1F481"]),
+      "PERSON" => MapSet.new(["1F481"]),
+      "CAT" => MapSet.new(["1F639"]),
+      "FACE" => MapSet.new(["1F639"]),
+      "WITH" => MapSet.new(["1F639"]),
+      "TEARS" => MapSet.new(["1F639"]),
+      "OF" => MapSet.new(["1F639"]),
+      "JOY" => MapSet.new(["1F639"])
     }
-    IO.inspect(emoji_file)
     assert Emoji.DataSet.load(emoji_file) == expected
   end
 

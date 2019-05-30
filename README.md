@@ -42,3 +42,10 @@ Our customers needs to find emojis based on key words
 
 - [ ] Create CLI interface
 - [ ] Create WEB interface
+
+### Step 5
+
+- [ ] Use [distillery](https://github.com/bitwalker/distillery) to put the project into production
+- [ ] Configure application to requires at least 3 nodes to start(1 master and 2 slaves)
+- [ ] Hot code upgrade can be useful on backend development?
+- [ ] Read/talk/share about what I learn and how to improve the development and release process
